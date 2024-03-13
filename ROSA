@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flor Animada para Isabel</title>
+<style>
+  .flower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: spin 5s linear infinite;
+  }
+  .petal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: pink;
+    animation: grow 2s ease-in-out infinite alternate;
+  }
+  .petal:nth-child(1) {
+    top: 30px;
+    left: 50px;
+    transform-origin: center bottom;
+  }
+  .petal:nth-child(2) {
+    top: 30px;
+    left: 120px;
+    transform-origin: center bottom;
+  }
+  .petal:nth-child(3) {
+    top: 85px;
+    left: 25px;
+    transform-origin: center bottom;
+  }
+  .petal:nth-child(4) {
+    top: 85px;
+    left: 145px;
+    transform-origin: center bottom;
+  }
+  .petal:nth-child(5) {
+    top: 135px;
+    left: 50px;
+    transform-origin: center bottom;
+  }
+  .center {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: yellow;
+    top: 70px;
+    left: 70px;
+    animation: pulse 1s infinite alternate;
+  }
+  .text {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes grow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+  <div class="text">TE QUIERO MUCHO ISABEL</div>
+</body>
+</html>
